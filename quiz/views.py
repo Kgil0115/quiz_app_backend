@@ -10,5 +10,5 @@ import random
 def randomQuiz(request, id):
     totalQuizs = Quiz.objects.all()
     randomQuizs = random.sample(list(totalQuizs), id)
-    serializer = QuizSerializer(randomQuizs, many= True)
+    serializer = QuizSerializer(randomQuizs, many= True)  
     return Response(serializer.data)
